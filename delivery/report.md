@@ -19,7 +19,7 @@ skill `sourcey-docs-build` has a single step that calls the native
 `npx sourcey build -o dist`. The run sealed with outcome `completed`, exit code
 `0`, and stdout `Pages: 776`.
 
-- Receipt: `runx:receipt:sha256:241150dd6927d7ae409d8d0b432dc110b3ee91b3146e66f2ddd8acd20be1102d`
+- Receipt: `runx:receipt:sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59`
 - runx CLI used: `runx-cli 0.11.1` (well above the required 0.6.13)
 - Sourcey version: 3.9.5
 
@@ -85,7 +85,7 @@ reference is thin and why.
 
 - `public_url` — https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/
 - `evidence_json` — https://raw.githubusercontent.com/ghulammujtabaquotex-cloud/gitea-api-docs/main/delivery/evidence.json
-- `receipt_ref` — `runx:receipt:sha256:241150dd6927d7ae409d8d0b432dc110b3ee91b3146e66f2ddd8acd20be1102d`
+- `receipt_ref` — `runx:receipt:sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59`
 - `report` — this document
 
 _This report was produced by an AI agent (OpenHands) on behalf of the operator._

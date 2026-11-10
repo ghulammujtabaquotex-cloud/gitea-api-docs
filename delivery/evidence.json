@@ -1,6 +1,6 @@
 {
   "schema": "sourcey.docs.evidence.v1",
-  "summary": "Sourcey-generated documentation site for go-gitea/gitea, built from the upstream OpenAPI 3.0.3 description pinned at commit 4f5a3e13e5f3aca85d830e3a9024c893b0bbf1e1 (tag v28.3.0). The build ran under a governed runx run and sealed receipt sha256:241150dd6927d7ae409d8d0b432dc110b3ee91b3146e66f2ddd8acd20be1102d. 776 site pages were produced, covering 537 API operations and 234 schemas.",
+  "summary": "Sourcey-generated documentation site for go-gitea/gitea, built from the upstream OpenAPI 3.0.3 description pinned at commit 4f5a3e13e5f3aca85d830e3a9024c893b0bbf1e1 (tag v28.3.0). The build ran under a governed runx run and sealed receipt sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59. 776 site pages were produced, covering 537 API operations and 234 schemas.",
   "observations": [
     "runx --version output: runx-cli 0.11.1",
     "repo_url: https://github.com/go-gitea/gitea",
@@ -13,9 +13,10 @@
     "coverage: 342 paths, 537 operations, 9 tags, 234 schemas, 7 security schemes, 4 deprecated operations",
     "page_list: 777 HTML files (776 site pages + 404.html); 771 under api/ (operations + models)",
     "public_url: https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/",
-    "receipt_ref: runx:receipt:sha256:241150dd6927d7ae409d8d0b432dc110b3ee91b3146e66f2ddd8acd20be1102d",
     "governed_run: runx skill ./runx-skill build (step command.execute, scope process.exec), seal outcome completed, exit_code 0",
-    "durability: published on GitHub Pages under the maintainer account ghulammujtabaquotex-cloud (github.io origin)"
+    "durability: published on GitHub Pages under the maintainer account ghulammujtabaquotex-cloud (github.io origin)",
+    "receipt_ref: runx:receipt:sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59",
+    "root_page: the site root now serves the documentation landing page directly (docs/index.md); no noindex redirect stub remains"
   ],
   "target": {
     "repo_url": "https://github.com/go-gitea/gitea",
@@ -79,13 +80,14 @@
     "4 operations are marked deprecated with no migration note; there is no externalDocs."
   ],
   "public_url": "https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/",
-  "receipt_ref": "runx:receipt:sha256:241150dd6927d7ae409d8d0b432dc110b3ee91b3146e66f2ddd8acd20be1102d",
+  "receipt_ref": "runx:receipt:sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59",
   "governed_run": {
     "skill": "sourcey-docs-build",
     "command": "runx skill ./runx-skill build -i project_dir=. -i out_dir=dist",
     "seal_outcome": "completed",
     "exit_code": 0,
-    "runx_version": "runx-cli 0.11.1"
+    "runx_version": "runx-cli 0.11.1",
+    "receipt_id": "sha256:35dbc031ae7d9c949240c8b18c18fdebaa875819d0ba9606ca454537dbe4ef59"
   },
   "runx_version_output": "runx-cli 0.11.1"
 }
