@@ -1,0 +1,237 @@
+# Edit a hook in a repository
+
+`PATCH /repos/{owner}/{repo}/hooks/{id}`
+
+Authentication (security requirement alternatives):
+
+```json
+[
+  {
+    "BasicAuth": []
+  },
+  {
+    "Token": []
+  },
+  {
+    "AccessToken": []
+  },
+  {
+    "AuthorizationHeaderToken": []
+  },
+  {
+    "SudoParam": []
+  },
+  {
+    "SudoHeader": []
+  },
+  {
+    "TOTPHeader": []
+  }
+]
+```
+
+- BasicAuth: http (basic)
+- Token: apiKey, query token. This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.
+- AccessToken: apiKey, query access_token. This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.
+- AuthorizationHeaderToken: apiKey, header Authorization. API tokens must be prepended with "token" followed by a space.
+- SudoParam: apiKey, query sudo. Sudo API request as the user provided as the key. Admin privileges are required.
+- SudoHeader: apiKey, header Sudo. Sudo API request as the user provided as the key. Admin privileges are required.
+- TOTPHeader: apiKey, header X-GITEA-OTP. Must be used in combination with BasicAuth if two-factor authentication is enabled.
+
+Parameters:
+
+- `owner` (path, string, required) - owner of the repo
+  Type: string
+
+- `repo` (path, string, required) - name of the repo
+  Type: string
+
+- `id` (path, integer, int64, required) - index of the hook
+  Type: integer, int64
+
+Request body: application/json
+
+Type: EditHookOption
+
+EditHookOption options when modify one hook
+
+Schema: [EditHookOption](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/api/models/edithookoption.md)
+
+- `active` (optional)
+  Type: boolean
+  
+  Whether the webhook is active and will be triggered
+
+- `authorization_header` (optional)
+  Type: string
+  
+  Authorization header to include in webhook requests
+
+- `branch_filter` (optional)
+  Type: string
+  
+  Branch filter pattern to determine which branches trigger the webhook
+
+- `config` (optional)
+  Type: object
+  
+  Configuration settings for the webhook
+  
+  Additional properties: 
+    Type: string
+
+- `events` (optional)
+  Type: Array<string>
+  
+  List of events that trigger this webhook
+  
+  Items:
+    Type: string
+
+- `name` (optional)
+  Type: string
+  
+  Optional human-readable name
+
+Responses:
+
+- 200: Hook
+
+Content type: application/json
+
+Type: Hook
+
+Hook a hook is a web hook when one repository changed
+
+Schema: [Hook](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/api/models/hook.md)
+
+- `active` (optional)
+  Type: boolean
+  
+  Whether the webhook is active and will be triggered
+
+- `authorization_header` (optional)
+  Type: string
+  
+  Authorization header to include in webhook requests
+
+- `branch_filter` (optional)
+  Type: string
+  
+  Branch filter pattern to determine which branches trigger the webhook
+
+- `config` (optional)
+  Type: object
+  
+  Configuration settings for the webhook
+  
+  Additional properties: 
+    Type: string
+
+- `created_at` (optional)
+  Type: string, date-time
+  
+  The date and time when the webhook was created
+
+- `events` (optional)
+  Type: Array<string>
+  
+  List of events that trigger this webhook
+  
+  Items:
+    Type: string
+
+- `id` (optional)
+  Type: integer, int64
+  
+  The unique identifier of the webhook
+
+- `name` (optional)
+  Type: string
+  
+  Optional human-readable name for the webhook
+
+- `type` (optional)
+  Type: string
+  
+  The type of the webhook (e.g., gitea, slack, discord)
+
+- `updated_at` (optional)
+  Type: string, date-time
+  
+  The date and time when the webhook was last updated
+
+- 404: APINotFound is a not found empty response
+
+## Examples
+
+### cURL
+
+```bash
+curl -X PATCH 'https://ghulammujtabaquotex-cloud.github.io/GITEA-API-APP-SUBURL/api/v1/repos/string/string/hooks/0' \
+  -H 'Authorization: Basic WU9VUl9VU0VSTkFNRTpZT1VSX1BBU1NXT1JE' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{
+  "active": true,
+  "authorization_header": "string",
+  "branch_filter": "string",
+  "config": {},
+  "events": [
+    "string"
+  ],
+  "name": "string"
+}'
+```
+
+### JavaScript
+
+```javascript
+const body = `{
+  "active": true,
+  "authorization_header": "string",
+  "branch_filter": "string",
+  "config": {},
+  "events": [
+    "string"
+  ],
+  "name": "string"
+}`;
+
+const response = await fetch('https://ghulammujtabaquotex-cloud.github.io/GITEA-API-APP-SUBURL/api/v1/repos/string/string/hooks/0', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Basic WU9VUl9VU0VSTkFNRTpZT1VSX1BBU1NXT1JE',
+    'Content-Type': 'application/json',
+  },
+  body,
+});
+
+const data = await response.text();
+```
+
+### Python
+
+```python
+import requests
+
+body = '''{
+  "active": true,
+  "authorization_header": "string",
+  "branch_filter": "string",
+  "config": {},
+  "events": [
+    "string"
+  ],
+  "name": "string"
+}'''
+
+response = requests.patch(
+    'https://ghulammujtabaquotex-cloud.github.io/GITEA-API-APP-SUBURL/api/v1/repos/string/string/hooks/0',
+    data=body.encode('utf-8'),
+    headers={
+        'Authorization': 'Basic WU9VUl9VU0VSTkFNRTpZT1VSX1BBU1NXT1JE',
+        'Content-Type': 'application/json',
+    },
+)
+print(response.text)
+```
