@@ -1,0 +1,12 @@
+{
+  "name": "gitea-api-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sourcey dev",
+    "build": "sourcey build"
+  },
+  "dependencies": {
+    "sourcey": "^3.9.5"
+  }
+}
