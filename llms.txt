@@ -2,6 +2,7 @@
 
 ## Guide
 
+- [Gitea API documentation](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/index.md): Sourcey-generated reference for go-gitea/gitea at tag v28.3.0 (commit 4f5a3e13e5f3aca85d830e3a9024c893b0bbf1e1).
 - [Gitea API reference](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/introduction.md): A Sourcey-generated, navigable reference for the Gitea REST API, built from source at a pinned commit.
 - [Coverage](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/coverage.md): What the pinned Gitea OpenAPI description actually contains, counted from the file.
 - [Known gaps](https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/gaps.md): Concrete, maintainer-facing gaps found in the pinned Gitea OpenAPI description, each reproducible from the file.

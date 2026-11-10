@@ -1,4 +1,8 @@
 {
+  "/gitea-api-docs/index.md": {
+    "Content-Type": "text/markdown; charset=utf-8",
+    "Link": "<https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs>; rel=\"canonical\", <https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/llms.txt>; rel=\"describedby\""
+  },
   "/gitea-api-docs/introduction.md": {
     "Content-Type": "text/markdown; charset=utf-8",
     "Link": "<https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/introduction>; rel=\"canonical\", <https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/llms.txt>; rel=\"describedby\""
@@ -3107,6 +3111,9 @@
   },
   "/gitea-api-docs/llms-full.txt": {
     "Content-Type": "text/plain; charset=utf-8"
+  },
+  "/gitea-api-docs": {
+    "Link": "<https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/index.md>; rel=\"alternate\"; type=\"text/markdown\", <https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
   },
   "/gitea-api-docs/introduction": {
     "Link": "<https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/introduction.md>; rel=\"alternate\"; type=\"text/markdown\", <https://ghulammujtabaquotex-cloud.github.io/gitea-api-docs/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
