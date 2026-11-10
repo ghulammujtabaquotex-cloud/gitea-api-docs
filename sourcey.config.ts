@@ -4,6 +4,7 @@ export default defineConfig({
   name: "Gitea API",
   siteUrl: "https://ghulammujtabaquotex-cloud.github.io",
   baseUrl: "/gitea-api-docs",
+  landingPage: true,
   repo: "https://github.com/go-gitea/gitea",
   editBranch: "main",
   editBasePath: "",
@@ -18,7 +19,7 @@ export default defineConfig({
           groups: [
             {
               group: "Overview",
-              pages: ["introduction", "coverage", "gaps"],
+              pages: ["index", "introduction", "coverage", "gaps"],
             },
           ],
         }),
