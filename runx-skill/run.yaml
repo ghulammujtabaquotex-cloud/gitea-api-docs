@@ -1,0 +1,47 @@
+skill: sourcey-docs-build
+version: "1.0.0"
+
+catalog:
+  publisher: local
+  kind: skill
+  audience: operator
+  visibility: internal
+  role: canonical
+  execution: execute
+  completion: runtime_receipt
+  approval: none
+  category: code
+
+runners:
+  build:
+    default: true
+    inputs:
+      project_dir:
+        type: string
+        required: true
+        description: Workspace-relative directory holding sourcey.config.ts.
+      out_dir:
+        type: string
+        required: true
+        description: Output directory for the built site.
+    result_from: [build]
+    steps:
+      - id: build
+        label: build the Sourcey documentation site and verify it landed
+        tool: command.execute
+        scopes:
+          - process.exec
+        inputs:
+          command: bash
+          args:
+            - "-c"
+            - "npx sourcey build -o \"$1\" && test -f \"$1/index.html\" && echo PAGES=$(find \"$1\" -name '*.html' | wc -l)"
+            - "build"
+            - "$input.out_dir"
+          cwd: $input.project_dir
+          timeout_ms: 600000
+          output_mode: text
+
+harness:
+  files: []
+  cases: []

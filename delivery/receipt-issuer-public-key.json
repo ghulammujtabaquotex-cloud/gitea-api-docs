@@ -1,0 +1,6 @@
+{
+  "schema": "runx.receipt.issuer_public_key.v1",
+  "kid": "local-16d086f1cd5e9c6d4bbc72356e79748ca9d84239ceb80a12cf43f82fd08ec0b1",
+  "alg": "Ed25519",
+  "public_key_base64": "LvjRObvTYEoc6j25GwF7kPNvi6GP3JXhayXPvDa1Lio="
+}
